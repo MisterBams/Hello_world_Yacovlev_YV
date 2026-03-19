@@ -1,4 +1,4 @@
-u#!/bin/bash
+#!/bin/bash
 
 echo "Только имена студентов"
 awk '{print $1}' students.txt
