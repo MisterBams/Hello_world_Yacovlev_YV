@@ -3,14 +3,12 @@
 FILE_PATH="./system.log"
 ERROR_CODE=1
 
-# 1. Файловый тест
 if [ -f "$FILE_PATH" ]; then
     echo "Лог-файл найден."
 else
     echo "Ошибка: файл не существует."
 fi
 
-# 2. Числовое сравнение через Case
 case $ERROR_CODE in
     0)
         echo "Статус: Ошибок нет." ;;
