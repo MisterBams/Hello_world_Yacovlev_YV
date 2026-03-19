@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=== Создание файлов ==="
+echo "Создание файлов"
 
 for i in {1..10}; do
     filename="test${i}.txt"
@@ -8,10 +8,7 @@ for i in {1..10}; do
     echo "Создан файл: $filename"
 done
 
-echo "=== Проверка созданных файлов ==="
-ls -la test*.txt 2>/dev/null || echo "Файлы не найдены"
-
-echo -e "\n=== Удаление файлов в обратном порядке ==="
+echo -e "\nУдаление файлов в обратном порядке"
 
 counter=10
 while [ $counter -ge 1 ]; do
@@ -26,8 +23,5 @@ while [ $counter -ge 1 ]; do
     
     counter=$((counter - 1))
 done
-
-echo "=== Проверка после удаления ==="
-ls -la test*.txt 2>/dev/null || echo "Файлы успешно удалены, ни одного не осталось"
 
 echo "Скрипт завершен."
